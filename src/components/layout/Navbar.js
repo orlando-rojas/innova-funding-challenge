@@ -1,5 +1,6 @@
 import { useHistory, useLocation } from "react-router";
 import styled from "styled-components";
+import { currentUser } from "../../fakeData";
 import homeIcon from "../../images/home-icon.svg";
 import MyAvatar from "./MyAvatar";
 
@@ -20,7 +21,7 @@ export default function Navbar() {
         <Menu />
       </div>
       <div>
-        <MyAvatar userName="Yair Lopez" />
+        <MyAvatar user={currentUser} />
       </div>
     </div>
   );

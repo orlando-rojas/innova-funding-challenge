@@ -14,6 +14,12 @@ module.exports = {
       purpleDark: "#452CB4",
       green: "#2D907288",
       greenLight: "#63E5C3",
+
+      tags: {
+        blue: "#6D949880",
+        default: "#9E997080",
+        danger: "#CD6C6980",
+      },
     },
     fontWeight: {
       light: 300,

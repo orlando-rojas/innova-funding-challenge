@@ -4,7 +4,7 @@ import Input from "../common/Input";
 export default function InviteUserForm() {
   return (
     <div
-      className="p-4 w-full bg-white absolute top-0 z-20"
+      className="p-4 w-full bg-white absolute top-0 z-20 "
       style={{
         height: "140px",
       }}

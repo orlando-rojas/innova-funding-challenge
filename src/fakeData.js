@@ -1,5 +1,7 @@
 export const currentUser = {
   name: "orlando rojas",
+  imgUrl:
+    "https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg",
   id: 1,
 };
 
@@ -10,17 +12,14 @@ const userJorge = {
 
 const userWilber = {
   name: "wilber carrascal",
+  imgUrl:
+    "https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14046.jpg",
   id: 3,
 };
 
 const userVictor = {
   name: "victor rodriguez",
   id: 2,
-};
-
-export const boardExample = {
-  title: "Todo for today",
-  users: [currentUser],
 };
 
 export const columnsExample = [
@@ -30,19 +29,32 @@ export const columnsExample = [
       {
         title: "Add social networks",
         description: "",
-        tags: ["Home", "Hacer", "Now"],
         comments: [
           {
             user: currentUser,
-            comment: "lorem ipsum is simply dummy text of the",
+            text: "lorem ipsum is simply dummy text of the",
           },
           {
             user: userJorge,
-            comment: "lorem ipsum is simply dummy text of the",
+            text: "lorem ipsum is simply dummy text of the",
           },
           {
             user: userWilber,
-            comment: "lorem ipsum is simply dummy text of the",
+            text: "lorem ipsum is simply dummy text of the",
+          },
+        ],
+        tags: [
+          {
+            name: "Home",
+            type: "default",
+          },
+          {
+            name: "Hacer",
+            type: "blue",
+          },
+          {
+            name: "Now",
+            type: "danger",
           },
         ],
       },
@@ -81,12 +93,19 @@ export const columnsExample = [
   },
 ];
 
-export const usersExample = [currentUser, userJorge, userWilber, userVictor];
+const usersExample = [currentUser, userJorge, userWilber, userVictor];
+
+export const boardExample = {
+  title: "Todo for today",
+  users: usersExample,
+  columns: columnsExample,
+};
 
 export const boardsExample = [
   {
     title: "Todo for today",
     users: [currentUser],
+    columns: columnsExample,
   },
   {
     title: "Todo for today",

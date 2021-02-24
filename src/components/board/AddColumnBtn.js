@@ -14,6 +14,6 @@ export default function AddColumnBtn(props) {
 }
 
 const RectangularButton = styled.button`
-  width: 40px;
+  min-width: 40px;
   height: 150px;
 `;

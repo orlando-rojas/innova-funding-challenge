@@ -4,16 +4,17 @@ import { getInitials } from "../../utils";
 import Logout from "./Logout";
 import Overlay from "../common/Overlay";
 
-export default function MyAvatar({ userName, userImg }) {
+export default function MyAvatar({ user }) {
   const [showLogout, setShowLogout] = React.useState(false);
 
   return (
     <>
       <Avatar
-        className="bg-grayLight rounded-full flex items-center justify-center text-purpleDark"
+        className="bg-grayLight rounded-full flex items-center justify-center text-purpleDark cursor-pointer"
         onClick={() => setShowLogout(!showLogout)}
+        avatarImg={user.imgUrl}
       >
-        {!userImg && getInitials(userName)}
+        {getInitials(user.name)}
       </Avatar>
       {showLogout && (
         <Overlay close={() => setShowLogout(!showLogout)}>

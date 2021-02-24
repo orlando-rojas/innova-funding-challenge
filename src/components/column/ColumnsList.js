@@ -4,7 +4,7 @@ import Column from "./Column";
 
 export default function ColumnsList({ columns }) {
   return (
-    <ListWrapper className="flex mb-6 overflow-auto -mr-4 h-auto">
+    <ListWrapper className="flex mb-6 overflow-auto -mr-4">
       {columns.map((column) => (
         <Column key={uuid()} column={column} />
       ))}
