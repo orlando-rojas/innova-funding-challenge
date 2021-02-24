@@ -11,6 +11,5 @@ export default function Container({ children }) {
 }
 
 const Wrapper = styled.div`
-  max-width: 610px;
-  max-height: 808px;
+  max-width: 100%;
 `;

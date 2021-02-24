@@ -1,6 +1,7 @@
 import CardsList from "./card/CardsList";
 import { cardsExample, currentUser } from "../dataExample";
 import React from "react";
+import SectionTitle from "./common/SectionTitle";
 
 export default function Home() {
   const [cards] = React.useState(cardsExample);
@@ -21,8 +22,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-function SectionTitle({ children }) {
-  return <h2 className="text-white text-2xl font-bold">{children}</h2>;
 }
