@@ -4,9 +4,27 @@ import Textarea from "../common/Textarea";
 import Comments from "./Comments";
 import styled from "styled-components";
 import Tags from "./Tags";
+import { currentUser } from "../../fakeData";
+import React from "react";
 export default function TaskForm({ task, close }) {
   const handleDescriptionChange = (e) => {
     task.description = e.target.value;
+  };
+
+  const [change, setChange] = React.useState(false);
+
+  const addComment = (newComment) => {
+    if (task.comments) task.comments = [...task.comments, newComment];
+    else task.comments = [newComment];
+  };
+
+  const handleAddComment = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.target.value);
+      addComment({ user: currentUser, text: e.target.value });
+      setChange(!change);
+      e.target.value = "";
+    }
   };
 
   return (
@@ -32,8 +50,8 @@ export default function TaskForm({ task, close }) {
         />
         <Tags tags={task.tags} />
         <Label>Comments</Label>
-        <Comments comments={task.comments || []} />
-        <Textarea placeholder="Type comment here" />
+        <Comments comments={task.comments} />
+        <Input placeholder="Type comment here" onKeyPress={handleAddComment} />
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import UserAvatar from "../user-avatar/UserAvatar";
 import uuid from "react-uuid";
 
 export default function Comments({ comments }) {
+  if (!comments) return null;
   return (
     <div className="my-1">
       {comments.map((comment) => (
