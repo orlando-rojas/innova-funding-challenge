@@ -8,8 +8,12 @@ module.exports = {
       black: "#000",
       gray: "#DBDBDB",
       grayLight: "#EDEDED",
+      grayDark: "#5C5B5B",
+      silver: "#B1B1B1",
       purple: "#4D2DD9",
       purpleDark: "#452CB4",
+      green: "#2D907288",
+      greenLight: "#63E5C3",
     },
     fontWeight: {
       light: 300,
