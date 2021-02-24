@@ -9,6 +9,7 @@ module.exports = {
       gray: "#DBDBDB",
       grayLight: "#EDEDED",
       purple: "#4D2DD9",
+      purpleDark: "#452CB4",
     },
     fontWeight: {
       light: 300,
@@ -21,6 +22,7 @@ module.exports = {
       0: "0",
       15: ".15",
       25: ".25",
+      30: ".30",
       45: ".45",
       50: ".5",
       100: "1",

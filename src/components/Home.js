@@ -1,23 +1,22 @@
-import CardsList from "./common/CardsList";
-import { cardsExample, currentUser } from "./common/dataExample";
+import CardsList from "./card/CardsList";
+import { cardsExample, currentUser } from "../dataExample";
+import React from "react";
 
 export default function Home() {
+  const [cards] = React.useState(cardsExample);
+
   return (
     <div className="mt-8">
       <div>
         <SectionTitle>My Boards</SectionTitle>
         <CardsList
-          cards={cardsExample.filter((card) =>
-            card.users.includes(currentUser)
-          )}
+          cards={cards.filter((card) => card.users.includes(currentUser))}
         />
       </div>
       <div>
         <SectionTitle>Other Boards</SectionTitle>
         <CardsList
-          cards={cardsExample.filter(
-            (card) => !card.users.includes(currentUser)
-          )}
+          cards={cards.filter((card) => !card.users.includes(currentUser))}
         />
       </div>
     </div>

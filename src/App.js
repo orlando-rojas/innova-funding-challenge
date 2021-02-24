@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Container from "./components/common/Container";
+import Container from "./components/layout/Container";
 import Home from "./components/Home";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UsersAvatarList from "./UserAvatarList";
+import UsersAvatarList from "../user-avatar/UserAvatarList";
 
 export default function Card({ title, users }) {
   return (

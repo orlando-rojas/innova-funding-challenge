@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="flex justify-between">
       <div className="flex items-center">
-        {window.location.pathname === "/" && (
+        {window.location.pathname !== "/" && (
           <img
             src={homeIcon}
             alt=""
@@ -18,8 +18,9 @@ export default function Navbar() {
         )}
         <Menu />
       </div>
-
-      <MyAvatar userName="Yair Lopez" />
+      <div>
+        <MyAvatar userName="Yair Lopez" />
+      </div>
     </div>
   );
 }
