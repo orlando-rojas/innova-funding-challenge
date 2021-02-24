@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 export default function Container({ children }) {
   return (
-    <Wrapper className="bg-purple h-screen w-screen p-4 ">
+    <Wrapper className="bg-purple h-screen w-screen p-4 overflow-y-auto">
       <Navbar />
       {children}
     </Wrapper>
