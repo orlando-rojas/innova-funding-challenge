@@ -12,5 +12,6 @@ export default function Card({ title, users }) {
 
 const CardWrapper = styled.div`
   height: 155px;
+  min-width: 155px;
   width: 155px;
 `;

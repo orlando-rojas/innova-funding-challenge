@@ -1,16 +1,24 @@
 import CardsList from "./common/CardsList";
-import { cardsExample } from "./common/usersExample";
+import { cardsExample, currentUser } from "./common/dataExample";
 
 export default function Home() {
   return (
     <div className="mt-8">
       <div>
         <SectionTitle>My Boards</SectionTitle>
-        <CardsList cards={cardsExample} />
+        <CardsList
+          cards={cardsExample.filter((card) =>
+            card.users.includes(currentUser)
+          )}
+        />
       </div>
       <div>
         <SectionTitle>Other Boards</SectionTitle>
-        <CardsList cards={cardsExample.filter((card) => card.other)} />
+        <CardsList
+          cards={cardsExample.filter(
+            (card) => !card.users.includes(currentUser)
+          )}
+        />
       </div>
     </div>
   );

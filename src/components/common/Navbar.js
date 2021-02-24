@@ -1,23 +1,25 @@
 import { useHistory } from "react-router";
 import styled from "styled-components";
 import homeIcon from "../../images/home-icon.svg";
-import UserAvatar from "./UserAvatar";
+import MyAvatar from "./MyAvatar";
 
 export default function Navbar() {
   const history = useHistory();
   return (
     <div className="flex justify-between">
       <div className="flex items-center">
-        <img
-          src={homeIcon}
-          alt=""
-          className="mr-2 cursor-pointer"
-          onClick={history.push("/")}
-        />
+        {window.location.pathname === "/" && (
+          <img
+            src={homeIcon}
+            alt=""
+            className="mr-2 cursor-pointer"
+            onClick={history.push("/")}
+          />
+        )}
         <Menu />
       </div>
 
-      <UserAvatar userName="Yair Lopez" size="big" />
+      <MyAvatar userName="Yair Lopez" />
     </div>
   );
 }
