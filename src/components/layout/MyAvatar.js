@@ -7,11 +7,10 @@ import Overlay from "../common/Overlay";
 export default function MyAvatar({ userName, userImg }) {
   const [showLogout, setShowLogout] = React.useState(false);
 
-  console.log(showLogout);
   return (
     <>
       <Avatar
-        className="bg-grayLight rounded-full flex items-center justify-center"
+        className="bg-grayLight rounded-full flex items-center justify-center text-purpleDark"
         onClick={() => setShowLogout(!showLogout)}
       >
         {!userImg && getInitials(userName)}
