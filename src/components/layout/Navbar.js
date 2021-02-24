@@ -1,19 +1,20 @@
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import styled from "styled-components";
 import homeIcon from "../../images/home-icon.svg";
 import MyAvatar from "./MyAvatar";
 
 export default function Navbar() {
   const history = useHistory();
+  const location = useLocation();
   return (
     <div className="flex justify-between">
       <div className="flex items-center">
-        {window.location.pathname !== "/" && (
+        {location.pathname !== "/" && (
           <img
             src={homeIcon}
             alt=""
             className="mr-2 cursor-pointer"
-            onClick={history.push("/")}
+            onClick={() => history.push("/")}
           />
         )}
         <Menu />
