@@ -17,6 +17,8 @@ export default function Board() {
   const toggleCreateList = () => setShowCreateList(!showCreateList);
   const toggleInviteUser = () => setShowInviteUser(!showInviteUser);
 
+  const addUserToBoard = (newUser) => (board.users = [newUser, ...board.users]);
+
   const addColumn = (newColumn) => {
     board.columns = [newColumn, ...board.columns];
     toggleCreateList();
@@ -36,7 +38,11 @@ export default function Board() {
 
       {showInviteUser && (
         <Overlay close={toggleInviteUser}>
-          <InviteUserForm />
+          <InviteUserForm
+            addUserToBoard={addUserToBoard}
+            boardUsers={board.users}
+            close={toggleInviteUser}
+          />
         </Overlay>
       )}
       {showCreateList && (

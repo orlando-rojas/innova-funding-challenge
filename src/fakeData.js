@@ -3,11 +3,13 @@ export const currentUser = {
   imgUrl:
     "https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg",
   id: 1,
+  email: "orlando@mail.com",
 };
 
 const userJorge = {
   name: "jorge gonzales",
   id: 4,
+  email: "jorge@mail.com",
 };
 
 const userWilber = {
@@ -15,11 +17,13 @@ const userWilber = {
   imgUrl:
     "https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14046.jpg",
   id: 3,
+  email: "wilber@mail.com",
 };
 
 const userVictor = {
   name: "victor rodriguez",
   id: 2,
+  email: "victor@mail.com",
 };
 
 export const columnsExample = [
@@ -93,11 +97,11 @@ export const columnsExample = [
   },
 ];
 
-const usersExample = [currentUser, userJorge, userWilber, userVictor];
+export const usersExample = [currentUser, userJorge, userWilber, userVictor];
 
 export const boardExample = {
   title: "Todo for today",
-  users: usersExample,
+  users: [currentUser, userJorge],
   columns: columnsExample,
 };
 

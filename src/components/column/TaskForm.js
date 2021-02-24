@@ -20,7 +20,6 @@ export default function TaskForm({ task, close }) {
 
   const handleAddComment = (e) => {
     if (e.key === "Enter") {
-      console.log(e.target.value);
       addComment({ user: currentUser, text: e.target.value });
       setChange(!change);
       e.target.value = "";
