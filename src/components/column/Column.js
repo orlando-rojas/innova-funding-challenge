@@ -3,7 +3,7 @@ import uuid from "react-uuid";
 import styled from "styled-components";
 import Input from "../common/Input";
 import Overlay from "../common/Overlay";
-import AddTaskBtn from "./AddTaskBtn";
+import BtnAddTask from "./BtnAddTask";
 import TaskForm from "./TaskForm";
 
 export default function Column({ column }) {
@@ -51,7 +51,7 @@ export default function Column({ column }) {
             onKeyPress={handleCreateTask}
           />
         )}
-        <AddTaskBtn onClick={() => setShowNewTask(!showNewTask)} />
+        <BtnAddTask onClick={() => setShowNewTask(!showNewTask)} />
       </div>
 
       {showTask && (

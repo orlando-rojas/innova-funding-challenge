@@ -2,7 +2,7 @@ import Button from "../common/Button";
 import Input from "../common/Input";
 import React from "react";
 
-export default function CreateColumnForm({ addColumn }) {
+export default function FormCreateColumn({ addColumn }) {
   const [newColumnName, setNewColumnName] = React.useState("");
 
   const handleChange = (e) => setNewColumnName(e.target.value);

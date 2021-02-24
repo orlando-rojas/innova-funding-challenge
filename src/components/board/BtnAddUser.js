@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import whitePlus from "../../images/white-plus.svg";
 
-export default function AddUserBtn(props) {
+export default function BtnAddColumn(props) {
   return (
     <RoundedButton
       className="rounded-full bg-green flex items-center justify-center cursor-pointer mr-1"

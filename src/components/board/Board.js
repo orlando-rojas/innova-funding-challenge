@@ -2,12 +2,12 @@ import React from "react";
 import { boardExample } from "../../fakeData";
 import SectionTitle from "../common/SectionTitle";
 import Overlay from "../common/Overlay";
-import InviteUserForm from "./InviteUserForm";
+import FormInviteUser from "./FormInviteUser";
 import UsersAvatarList from "../user-avatar/UserAvatarList";
-import AddUserBtn from "./AddUserBtn";
+import BtnAddUser from "./BtnAddUser";
 import ColumnsList from "../column/ColumnsList";
-import AddColumnBtn from "./AddColumnBtn";
-import CreateListform from "./CreateColumnForm";
+import BtnAddColumn from "./BtnAddColumn";
+import FormCreateColumn from "./FormCreateColumn";
 
 export default function Board() {
   const [board] = React.useState(boardExample);
@@ -28,17 +28,17 @@ export default function Board() {
     <div className="mt-8">
       <SectionTitle>{board.title}</SectionTitle>
       <div className="flex mt-4">
-        <AddUserBtn onClick={toggleInviteUser} />
+        <BtnAddUser onClick={toggleInviteUser} />
         <UsersAvatarList users={board.users} />
       </div>
       <div className="flex mt-6">
-        <AddColumnBtn onClick={toggleCreateList} />
+        <BtnAddColumn onClick={toggleCreateList} />
         <ColumnsList columns={board.columns} />
       </div>
 
       {showInviteUser && (
         <Overlay close={toggleInviteUser}>
-          <InviteUserForm
+          <FormInviteUser
             addUserToBoard={addUserToBoard}
             boardUsers={board.users}
             close={toggleInviteUser}
@@ -47,7 +47,7 @@ export default function Board() {
       )}
       {showCreateList && (
         <Overlay close={toggleCreateList}>
-          <CreateListform addColumn={addColumn} />
+          <FormCreateColumn addColumn={addColumn} />
         </Overlay>
       )}
     </div>

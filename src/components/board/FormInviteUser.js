@@ -4,7 +4,7 @@ import React from "react";
 import { usersExample } from "../../fakeData";
 import styled from "styled-components";
 
-export default function InviteUserForm({ addUserToBoard, boardUsers, close }) {
+export default function FormInviteUser({ addUserToBoard, boardUsers, close }) {
   const [error, setError] = React.useState("");
   const [newUser, setNewUser] = React.useState("");
 
