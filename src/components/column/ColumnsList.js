@@ -17,4 +17,8 @@ const ListWrapper = styled.div`
     padding-right: 20px;
     margin-right: 40px;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
